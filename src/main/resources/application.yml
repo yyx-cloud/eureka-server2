@@ -1,0 +1,14 @@
+server:
+  port: 8762
+spring:
+  application:
+    name: eureka-server-ha
+eureka:
+  client:
+#    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka/
+  instance:
+    #    如果开启registerWithEureka，需要使用ip注册，否则按照系统名称注册导致无法找到服务
+    prefer-ip-address: true
